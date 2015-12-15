@@ -15,7 +15,7 @@ function changegun(gun, guntype){
         document.getElementsByClassName('gunname')[index].innerHTML = sgun['name'];
     }
     for(var i = 0 ; i < 2 ; i++){
-        document.getElementsByClassName('gunpng')[i].src = 'img/' + sgunid + '.png'
+        document.getElementsByClassName('gunpng')[i].src = sgunid + '.png'
     }
     if(sgun['type'] == 'auto'){
         $("#shootbtn").bind('touchstart', function(){
@@ -28,10 +28,10 @@ function changegun(gun, guntype){
         if(document.getElementById(stat)){
             document.getElementById(stat).innerHTML = "";
             for(i = 0 ; i < sgun['stats'][stat]; i++){
-                document.getElementById(stat).innerHTML += "<img class='square' src='img/white.png'>";
+                document.getElementById(stat).innerHTML += "<img class='square' src='white.png'>";
             }
             for(i = 0; i < 20 - sgun['stats'][stat]; i++){
-                document.getElementById(stat).innerHTML += "<img class='square' src='img/black.png'>";
+                document.getElementById(stat).innerHTML += "<img class='square' src='black.png'>";
             }
         }
     }
