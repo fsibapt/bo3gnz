@@ -18,11 +18,15 @@ function changegun(gun, guntype){
         document.getElementsByClassName('gunpng')[i].src = sgunid + '.png'
     }
     if(sgun['type'] == 'auto'){
-        $("#shootbtn").bind('touchstart', function(){
-            intervalId = setInterval(shoot(), 60000/sgun['rpm']);
-        }).bind('touchend', function(){
+        $("#shootbtn").mousedown(function() {
+            intervalId = setInterval(shoot, 60000/sgun['rpm']);
+        }).mouseup(function() {
             clearInterval(intervalId);
         });
+
+        function do_something() {
+            // whatever
+        }
     }
     for(stat in sgun['stats']){
         if(document.getElementById(stat)){
