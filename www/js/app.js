@@ -17,6 +17,13 @@ function changegun(gun, guntype){
     for(var i = 0 ; i < 2 ; i++){
         document.getElementsByClassName('gunpng')[i].src = 'img/' + sgunid + '.png'
     }
+    if(sgun['type'] == 'auto'){
+        $("#shootbtn").bind('touchstart', function(){
+            intervalId = setInterval(shoot(), 60000/sgun['rpm']);
+        }).bind('touchend', function(){
+            clearInterval(intervalId);
+        });
+    }
     for(stat in sgun['stats']){
         if(document.getElementById(stat)){
             document.getElementById(stat).innerHTML = "";
@@ -28,24 +35,34 @@ function changegun(gun, guntype){
             }
         }
     }
-    useammo();
+    useammo('load');
 }
 
-function useammo(){
+function useammo(param){
     if(!localStorage[sgunid]){
         reload();
     }
     else{
-        localStorage[sgunid]--;
+        if(param=='shoot'){
+            localStorage[sgunid]--;
+        }
     }
     document.getElementById('ammo').innerHTML = localStorage[sgunid] + '/' + sgun['stats']['ammo'];
 }
 
 function shoot(){
     if(localStorage[sgunid] > 0){
-        useammo();
+        if(sgun['type'] == 'burst'){
+            gunsound();
+            for(var i = 0 ; i < sgun['amount'] ; i++){
+                useammo('shoot');
+            }
+        }
+        else{
+            gunsound();
+            useammo('shoot');
+        }
         document.getElementById('gunimage').style.webkitTransform = 'rotate(10deg)';
-        gunsound();
         document.getElementById('gunimage').style.webkitTransform = 'rotate(0)';
 
     }

@@ -11,7 +11,9 @@ guns =
                     "firerate": 10,
                     "accuracy": 7,
                     "ammo": 30
-                }
+                },
+                "type": "auto",
+                "rpm": 720
             },
             "vmp": {
                 "name": "VMP",
@@ -21,7 +23,9 @@ guns =
                     "firerate": 15,
                     "accuracy": 3,
                     "ammo": 40
-                }
+                },
+                "type": "auto",
+                "rpm": 900
             },
             "weevil": {
                 "name": "Weevil",
@@ -31,7 +35,9 @@ guns =
                     "firerate": 16,
                     "accuracy": 8,
                     "ammo": 50
-                }
+                },
+                "type": "auto",
+                "rpm": 720
             },
             "vesper": {
                 "name": "Vesper",
@@ -41,7 +47,9 @@ guns =
                     "firerate": 18,
                     "accuracy": 5,
                     "ammo": 30
-                }
+                },
+                "type": "auto",
+                "rpm": 1200
             },
             "pharo": {
                 "name": "Pharo",
@@ -51,7 +59,9 @@ guns =
                     "firerate": 11,
                     "accuracy": 7,
                     "ammo": 40
-                }
+                },
+                "type": "auto",
+                "rpm": 909
             },
             "razorback": {
                 "name": "Razorback",
@@ -61,7 +71,9 @@ guns =
                     "firerate": 6,
                     "accuracy": 11,
                     "ammo": 43
-                }
+                },
+                "type": "auto",
+                "rpm": 625
             }
         }
     },
@@ -76,7 +88,9 @@ guns =
                     "firerate": 15,
                     "accuracy": 5,
                     "ammo": 30
-                }
+                },
+                "type": "auto",
+                "rpm": 650
             },
             "xr2": {
                 "name": "XR-2",
@@ -86,7 +100,9 @@ guns =
                     "firerate": 12,
                     "accuracy": 7,
                     "ammo": 30
-                }
+                },
+                "type": "burst",
+                "rpm": 3
             },
             "hvk30": {
                 "name": "HVK-30",
@@ -96,7 +112,9 @@ guns =
                     "firerate": 17,
                     "accuracy": 9,
                     "ammo": 30
-                }
+                },
+                "type": "auto",
+                "rpm": 700
             },
             "icr1": {
                 "name": "ICR-1",
@@ -106,7 +124,9 @@ guns =
                     "firerate": 11,
                     "accuracy": 13,
                     "ammo": 30
-                }
+                },
+                "type": "auto",
+                "rpm": 600
             },
             "manowar": {
                 "name": "Man-O-War",
@@ -116,7 +136,9 @@ guns =
                     "firerate": 8,
                     "accuracy": 9,
                     "ammo": 30
-                }
+                },
+                "type": "auto",
+                "rpm": 517
             },
             "sheiva": {
                 "name": "Sheiva",
@@ -126,7 +148,8 @@ guns =
                     "firerate": 2,
                     "accuracy": 10,
                     "ammo": 20
-                }
+                },
+                "type": "semi"
             },
             "m8a7": {
                 "name": "M8A7",
@@ -136,7 +159,9 @@ guns =
                     "firerate": 7,
                     "accuracy": 14,
                     "ammo": 32
-                }
+                },
+                "type": "burst",
+                "amount": 4
             }
         }
     },
@@ -151,7 +176,8 @@ guns =
                     "firerate": 6,
                     "accuracy": 3,
                     "ammo": 8
-                }
+                },
+                "type": "semi"
             },
             "205brecci": {
                 "name": "205 Brecci",
@@ -161,7 +187,8 @@ guns =
                     "firerate": 8,
                     "accuracy": 7,
                     "ammo": 12
-                }
+                },
+                "type": "semi"
             },
             "haymaker12": {
                 "name": "Haymaker 12",
@@ -171,7 +198,9 @@ guns =
                     "firerate": 13,
                     "accuracy": 5,
                     "ammo": 16
-                }
+                },
+                "type": "auto",
+                "rpm": 350
             },
             "argus": {
                 "name": "Argus",
@@ -181,7 +210,8 @@ guns =
                     "firerate": 4,
                     "accuracy": 5,
                     "ammo": 10
-                }
+                },
+                "type": "semi"
             }
         }
     },
@@ -196,7 +226,9 @@ guns =
                     "firerate": 7,
                     "accuracy": 11,
                     "ammo": 75
-                }
+                },
+                "type": "auto",
+                "rpm": 500
             },
             "dingo": {
                 "name": "Dingo",
@@ -206,7 +238,9 @@ guns =
                     "firerate": 14,
                     "accuracy": 9,
                     "ammo": 60
-                }
+                },
+                "type": "auto",
+                "rpm": 640
             },
             "gorgon": {
                 "name": "Gorgon",
@@ -216,7 +250,9 @@ guns =
                     "firerate": 6,
                     "accuracy": 11,
                     "ammo": 40
-                }
+                },
+                "type": "auto",
+                "rpm": 470
             },
             "48dredge": {
                 "name": "48 Dredge",
@@ -226,7 +262,9 @@ guns =
                     "firerate": 10,
                     "accuracy": 10,
                     "ammo": 60
-                }
+                },
+                "type": "burst",
+                "amount": 6
             }
         }
     },
@@ -241,7 +279,8 @@ guns =
                     "firerate": 8,
                     "accuracy": 15,
                     "ammo": 8
-                }
+                },
+                "type": "semi"
             },
             "locus": {
                 "name": "Locus",
@@ -251,7 +290,8 @@ guns =
                     "firerate": 3,
                     "accuracy": 14,
                     "ammo": 20
-                }
+                },
+                "type": "semi"
             },
             "p06": {
                 "name": "P-06",
@@ -261,7 +301,9 @@ guns =
                     "firerate": 1,
                     "accuracy": 12,
                     "ammo": 15
-                }
+                },
+                "type": "burst",
+                "amount": 3
             },
             "svg100": {
                 "name": "SVG-100",
@@ -271,7 +313,8 @@ guns =
                     "firerate": 2,
                     "accuracy": 13,
                     "ammo": 6
-                }
+                },
+                "type": "semi"
             }
         }
     },
@@ -286,7 +329,8 @@ guns =
                     "firerate": 5,
                     "accuracy": 11,
                     "ammo": 20
-                }
+                },
+                "type": "semi"
             },
             "rk5": {
                 "name": "RK5",
@@ -296,7 +340,9 @@ guns =
                     "firerate": 13,
                     "accuracy": 11,
                     "ammo": 15
-                }
+                },
+                "type": "burst",
+                "amount": 3
             },
             "lcar9": {
                 "name": "L-CAR 9",
@@ -306,32 +352,9 @@ guns =
                     "firerate": 16,
                     "accuracy": 8,
                     "ammo": 20
-                }
-            }
-        }
-    },
-    "launchers": {
-        "name": "Launchers",
-        "guns": {
-            "xm53": {
-                "name": "XM-53",
-                "stats": {
-                    "damage": 16,
-                    "range": 16,
-                    "firerate": 2,
-                    "accuracy": 16,
-                    "ammo": 1
-                }
-            },
-            "blackcell": {
-                "name": "BlackCell",
-                "stats": {
-                    "damage": 18,
-                    "range": 18,
-                    "firerate": 2,
-                    "accuracy": 18,
-                    "ammo": 1
-                }
+                },
+                "type": "auto",
+                "rpm": 800
             }
         }
     }
