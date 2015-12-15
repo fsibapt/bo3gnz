@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div data-role="page" id="main" data-theme="b">
+        <div data-role="header" data-add-back-btn="true" data-tap-toggle="false">
+            <h1>Guns</h1>
+        </div>
+        <ul id="gunlist" data-role="listview">
+        </ul>
+    </div>
+    <div data-role="page" id="gun" data-theme="b">
+        <div data-role="header" data-add-back-btn="true" data-tap-toggle="false">
+            <h1 class="gunname"></h1>
+        </div>
+        <div class='ui-content' id="gunimage" data-role="content">
+            <img class="gunpng" src="" onclick="shoot()" onload="resizeimg(this)">
+        </div>
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <div>
+                <a href="#stats" class="ui-btn ui-icon-info ui-btn-icon-left">
+                    Stats
+                </a>
+                <a onclick="reload()" class="ui-btn ui-icon-recycle ui-btn-icon-left">
+                    Reload
+                </a>
+            </div>
+            <div id="ammo" class="ui-btn-right">
+            </div>
+        </div>
+    </div>
+    <div data-role="page" id="stats" data-theme="b">
+        <div data-role="header" data-add-back-btn="true" data-tap-toggle="false">
+            <h1 class="gunname"></h1>
+        </div>
+        <div data-role="content">
+            <img class="gunpng" src="" onclick="shoot()" onload="resizeimg(this)">
+        </div>
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <table>
+
+                <tr>
+                    <td>
+                        Damage
+                    </td>
+                    <td id="damage">
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Range
+                    </td>
+                    <td id="range">
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Fire Rate
+                    </td>
+                    <td id="firerate">
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Accuracy
+                    </td>
+                    <td id="accuracy">
+
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+    </div>
+    <script src="js/guns.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
