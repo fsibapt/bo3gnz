@@ -26,6 +26,10 @@ function changegun(gun, guntype){
             clearInterval(intervalId);
         });
     }
+    else{
+        $("#shootbtn").unbind('touchstart');
+        $("#shootbtn").unbind('touchend');
+    }
     for(stat in sgun['stats']){
         if(document.getElementById(stat)){
             document.getElementById(stat).innerHTML = "";
@@ -64,8 +68,24 @@ function shoot(){
             gunsound();
             useammo('shoot');
         }
-        document.getElementById('gunimage').style.webkitTransform = 'rotate(10deg)';
-        document.getElementById('gunimage').style.webkitTransform = 'rotate(0)';
+        if(sgun['type'] == 'auto'){
+            dur = 60000/sgun['rpm'];
+        }
+        else{
+            dur = 100;
+        }
+        $('#gunimage').animate({  textIndent: 0 }, {
+            step: function(now,fx) {
+                $(this).css('-webkit-transform','rotate(2deg)');
+            },
+            duration: 1
+        },'linear');
+        $('#gunimage').animate({  textIndent: 0 }, {
+            step: function(now,fx) {
+                $(this).css('-webkit-transform','rotate(0deg)');
+            },
+            duration: 1
+        },'linear');
 
     }
 }
