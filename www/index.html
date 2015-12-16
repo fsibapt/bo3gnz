@@ -9,6 +9,7 @@
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
     <script src="js/jquery.blockUI.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
 </head>
 <body>
     <div data-role="page" id="main" data-theme="b">
@@ -90,5 +91,28 @@
     </div>
     <script src="js/guns.js"></script>
     <script src="js/app.js"></script>
+    <script>
+        var enabledAdMob = true; // easily enable/disable AdMob
+        var admobid = {};
+        admobid = { // for Android
+            banner: 'ca-app-pub-3208688119731802/3752209974', // or DFP format "/6253334/dfp_example_ad"
+            interstitial: 'ca-app-pub-3208688119731802/6845277177'
+        };
+
+        function initApp()
+        {
+            if (enabledAdMob)
+            {
+                AdMob.createBanner({
+                    adId: admobid.banner,
+                    position: AdMob.AD_POSITION.BOTTOM_CENTER,
+                    autoShow: true,
+                    isTesting:true
+                });
+            }
+        }
+
+        document.addEventListener('deviceready', initApp, false);
+    </script>
 </body>
 </html>
