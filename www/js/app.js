@@ -15,7 +15,7 @@ function changegun(gun, guntype){
         document.getElementsByClassName('gunname')[index].innerHTML = sgun['name'];
     }
     for(var i = 0 ; i < 2 ; i++){
-        document.getElementsByClassName('gunpng')[i].src = 'img/' + sgunid + '.png'
+        document.getElementsByClassName('gunpng')[i].src = 'img/' + sgunid + '.PNG'
     }
     if(sgun['type'] == 'auto'){
         $("#shootbtn").unbind('touchstart');
