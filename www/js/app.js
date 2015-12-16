@@ -15,7 +15,7 @@ function changegun(gun, guntype){
         document.getElementsByClassName('gunname')[index].innerHTML = sgun['name'];
     }
     for(var i = 0 ; i < 2 ; i++){
-        document.getElementsByClassName('gunpng')[i].src = 'file:///android_asset/www/' + sgunid + '.png'
+        document.getElementsByClassName('gunpng')[i].src = 'img/' + sgunid + '.png'
     }
     if(sgun['type'] == 'auto'){
 
@@ -28,16 +28,15 @@ function changegun(gun, guntype){
     }
     else{
         $("#shootbtn").unbind('touchstart');
-        $("#shootbtn").unbind('touchend');
     }
     for(stat in sgun['stats']){
         if(document.getElementById(stat)){
             document.getElementById(stat).innerHTML = "";
             for(i = 0 ; i < sgun['stats'][stat]; i++){
-                document.getElementById(stat).innerHTML += "<img class='square' src='file:///android_asset/www/white.png'>";
+                document.getElementById(stat).innerHTML += "<img class='square' src='img/white.png'>";
             }
             for(i = 0; i < 20 - sgun['stats'][stat]; i++){
-                document.getElementById(stat).innerHTML += "<img class='square' src='file:///android_asset/www/black.png'>";
+                document.getElementById(stat).innerHTML += "<img class='square' src='img/black.png'>";
             }
         }
     }
@@ -78,13 +77,13 @@ function shoot(){
             step: function(now,fx) {
                 $(this).css('-webkit-transform','rotate(2deg)');
             },
-            duration: 1
+            duration: dur
         },'linear');
         $('#gunimage').animate({  textIndent: 0 }, {
             step: function(now,fx) {
                 $(this).css('-webkit-transform','rotate(0deg)');
             },
-            duration: 1
+            duration: dur
         },'linear');
 
     }
