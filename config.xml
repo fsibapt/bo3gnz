@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.michelereho.bo3guns" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>BO3 Guns</name>
+    <name>BO3 Guns Simulator</name>
     <description>
         A new simulator for the guns of BO3.
     </description>
