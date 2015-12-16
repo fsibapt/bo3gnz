@@ -18,7 +18,8 @@ function changegun(gun, guntype){
         document.getElementsByClassName('gunpng')[i].src = 'img/' + sgunid + '.png'
     }
     if(sgun['type'] == 'auto'){
-
+        $("#shootbtn").unbind('touchstart');
+        $("#shootbtn").unbind('touchend');
         $("#shootbtn").bind('touchstart', function(event){
             event.preventDefault();
             intervalId = setInterval(shoot, 60000/sgun['rpm']);
@@ -28,6 +29,7 @@ function changegun(gun, guntype){
     }
     else{
         $("#shootbtn").unbind('touchstart');
+        $("#shootbtn").unbind('touchend');
     }
     for(stat in sgun['stats']){
         if(document.getElementById(stat)){
@@ -68,7 +70,7 @@ function shoot(){
             useammo('shoot');
         }
         if(sgun['type'] == 'auto'){
-            dur = 60000/sgun['rpm'];
+            dur = (60000/sgun['rpm'])/10;
         }
         else{
             dur = 100;
