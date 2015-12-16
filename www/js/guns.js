@@ -102,7 +102,7 @@ guns =
                     "ammo": 30
                 },
                 "type": "burst",
-                "rpm": 3
+                "amount": 3
             },
             "hvk30": {
                 "name": "HVK-30",

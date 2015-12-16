@@ -14,7 +14,7 @@ function changegun(gun, guntype){
     for(index in document.getElementsByClassName('gunname')){
         document.getElementsByClassName('gunname')[index].innerHTML = sgun['name'];
     }
-    for(var i = 0 ; i < 2 ; i++){
+    for(var i = 0 ; i < 1 ; i++){
         document.getElementsByClassName('gunpng')[i].src = 'img/' + sgunid + '.PNG'
     }
     if(sgun['type'] == 'auto'){
@@ -92,9 +92,11 @@ function shoot(){
 }
 
 function reload(){
+    $.blockUI();
     localStorage[sgunid] = sgun['stats']['ammo'];
     document.getElementById('ammo').innerHTML = localStorage[sgunid] + '/' + sgun['stats']['ammo'];
     audio = new Audio('snd/'+sgunid+'/reload.wav');
+    audio.setAttribute('onended', '$.unblockUI();');
     audio.play();
 }
 

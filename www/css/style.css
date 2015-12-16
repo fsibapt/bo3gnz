@@ -23,7 +23,7 @@ img{
 }
 
 .square{
-    height: 10pt;
-    width: 8pt;
+    height: 20pt;
+    width: auto;
     padding: 1pt;
 }
