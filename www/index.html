@@ -99,18 +99,23 @@
             interstitial: 'ca-app-pub-3208688119731802/6845277177'
         };
 
-        function initApp()
-        {
-            if (enabledAdMob)
-            {
-                AdMob.createBanner({
-                    adId: admobid.banner,
-                    position: AdMob.AD_POSITION.BOTTOM_CENTER,
-                    autoShow: true,
-                    isTesting:true
-                });
-            }
+        function initApp() {
+            if (! AdMob ) { alert( 'admob plugin not ready' ); return; }
+
+            AdMob.createBanner( {
+                adId: admobid.banner,
+                overlap: false,
+                offsetTopBar: false,
+                position: AdMob.AD_POSITION.BOTTOM_CENTER,
+                bgColor: 'black'
+            } );
+
+            AdMob.prepareInterstitial({
+                adId: admobid.interstitial,
+                autoShow: true
+            });
         }
+
 
         document.addEventListener('deviceready', initApp, false);
     </script>
