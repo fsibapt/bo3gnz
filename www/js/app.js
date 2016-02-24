@@ -55,6 +55,9 @@ function useammo(param){
         }
     }
     document.getElementById('ammo').innerHTML = localStorage[sgunid] + '/' + sgun['stats']['ammo'];
+    if(0 >= localStorage[sgunid]){
+        if(AdMob) AdMob.showInterstitial();
+    }
 }
 
 function shoot(){
@@ -93,6 +96,7 @@ function shoot(){
 
 function reload(){
     $.blockUI();
+    
     localStorage[sgunid] = sgun['stats']['ammo'];
     document.getElementById('ammo').innerHTML = localStorage[sgunid] + '/' + sgun['stats']['ammo'];
     audio = new Audio('snd/'+sgunid+'/reload.wav');
